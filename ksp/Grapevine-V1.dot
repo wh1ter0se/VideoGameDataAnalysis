@@ -1,0 +1,426 @@
+digraph g {
+    fontname="Helvetica,Arial,sans-serif";
+    overlap="false";
+    // splines="curved";
+    node [fontname="Helvetica,Arial,sans-serif"];
+    edge [fontname="Helvetica,Arial,sans-serif"];
+    graph [rankdir="LR"];
+    node [fontsize="16", shape="ellipse"];
+    edge [];
+    
+    "Kerbol-A" [label=
+        "<f0> 
+            Kerbol-A \n 
+            (6.316 Gm \| Kerbol) \n 
+            [Ivy ??]
+        | <mission_control> 
+            [1] RA-100 (100 Gm)
+        | <planet_network> 
+            [3] RA-100 (100 Gm)
+        | <inner> 
+            [3] RA-100 (100 Gm)
+        | <outer> 
+            [3] RA-100 (100 Gm)
+        | <loopback>
+            [4] RA-100 (100 Gm)
+        | <active_vessel>
+            [1] RA-100 (100 Gm)
+
+        ",
+        shape="record",
+        group="Kerbol"];
+    "Kerbol-B" [label=
+        "<f0> 
+            Kerbol-B \n 
+            (9.931 Gm \| Kerbol) \n 
+            [Ivy ??]
+        | <mission_control> 
+            [1] RA-100 (100 Gm)
+        | <planet_network> 
+            [3] RA-100 (100 Gm)
+        | <inner> 
+            [3] RA-100 (100 Gm)
+        | <outer> 
+            [3] RA-100 (100 Gm)
+        | <loopback>
+            [4] RA-100 (100 Gm)
+        | <active_vessel>
+            [1] RA-100 (100 Gm)
+
+        ",
+        shape="record",
+        group="Kerbol"];
+
+    "Kerbol-C" [label=
+        "<f0> 
+            Kerbol-C \n 
+            (13.600 Gm \| Kerbol) \n 
+            [Ivy ??]
+        | <mission_control> 
+            [1] RA-100 (100 Gm)
+        | <planet_network> 
+            [3] RA-100 (100 Gm)
+        | <inner> 
+            [3] RA-100 (100 Gm)
+        | <outer> 
+            [3] RA-100 (100 Gm)
+        | <loopback>
+            [4] RA-100 (100 Gm)
+        | <active_vessel>
+            [1] RA-100 (100 Gm)
+
+        ",
+        shape="record",
+        group="Kerbin"];
+        "Kerbin-A" [label=
+            "<f0> 
+                Kerbin-A \n 
+                (120.000 km \| Kerbin) \n 
+                [Ivy ??]
+            | <mission_control> 
+                [1] RA-2 (200 Mm)
+            | <outer_main> 
+                [3] RA-2 (200 Mm)
+            | <outer_aux1>
+                [3] RA-2 (200 Mm)
+            | <outer_aux2>
+                [3] RA-2 (200 Mm)
+            | <loopback>
+                [4] RA-2 (200 Mm)
+            | <active_vessel>
+                [1] RA-100 (100 Gm)
+            ",
+            shape="record",
+            group="Kerbin"];
+
+        "Kerbin-B" [label=
+            "<f0> 
+                Kerbin-B \n 
+                (80.000 Mm \| Kerbin) \n 
+                [Ivy ??]
+            | <mission_control> 
+                [1] RA-2 (200 Mm)
+            | <inner> 
+                [3] RA-2 (200 Mm)
+            | <outer> 
+                [3] RA-100 (100 Gm)
+            | <loopback> 
+                [4] RA-2 (200 Mm)
+            | <planet_cone>
+                [1] RA-2 (200 Mm)
+            | <active_vessel>
+                [1] RA-100 (100 Gm)
+
+            ",
+            shape="record",
+            group="Kerbin"];
+        "Mun-A" [label=
+            "<f0> 
+                Mun-A \n 
+                (2.000 Mm \| Mun) \n 
+                [Ivy ??]
+            | <mission_control> 
+                [1] RA-2 (200 Mm)
+            | <inner> 
+                [3] RA-2 (200 Mm)
+            | <loopback>
+                [4] RA-2 (200 Mm)
+            | <planet_cone>
+                [1] RA-2 (200 Mm)
+            | <active_vessel>
+                [1] RA-100 (100 Gm)
+
+            ",
+            shape="record",
+            group="Kerbin"];
+        "Minmus-A" [label=
+            "<f0> 
+                Minmus-A \n 
+                (2.000 Mm \| Minmus) \n 
+                [Ivy ??]
+            | <mission_control> 
+                [1] RA-2 (200 Mm)
+            | <inner> 
+                [3] RA-2 (200 Mm)
+            | <loopback>
+                [4] RA-2 (200 Mm)
+            | <planet_cone>
+                [1] RA-2 (200 Mm)
+            | <active_vessel>
+                [1] RA-100 (100 Gm)
+
+            ",
+            shape="record",
+            group="Kerbin"];
+        "KSC" [label=
+            "<f0> 
+                Mission Control
+            | <f1>
+                Tracking Station (70 Mm)", 
+            shape="record",
+            group="Kerbin"];
+        "Kerbin" [label=
+            "<f0> Kerbin",
+            shape="record",
+            group="Kerbin"];
+        "Mun" [label=
+            "<f0> Mun",
+            shape="record",
+            group="Kerbin"];
+        "Minmus" [label=
+            "<f0> Minmus",
+            shape="record",
+            group="Kerbin"];
+        "Active_Vessel_Kerbin" [label=
+            "<f0> Active Vessel (Kerbin)",
+            shape="record",
+            group="Kerbin"];
+        
+
+        
+    "Kerbol-D" [label=
+        "<f0> 
+            Kerbol-D \n 
+            (20.726 Gm \| Kerbol) \n 
+            [Ivy ??]
+        | <mission_control> 
+            [1] RA-100 (100 Gm)
+        | <planet_network> 
+            [3] RA-100 (100 Gm)
+        | <inner> 
+            [3] RA-100 (100 Gm)
+        | <outer> 
+            [3] RA-100 (100 Gm)
+        | <loopback>
+            [4] RA-100 (100 Gm)
+        | <active_vessel>
+            [1] RA-100 (100 Gm)
+
+        ",
+        shape="record",
+        group="Duna"];
+        "Duna-A" [label=
+            "<f0> 
+                Duna-A \n 
+                (? km \| Duna) \n 
+                [Ivy ??]
+            | <mission_control> 
+                [1] RA-2 (200 Mm)
+            | <outer_main> 
+                [3] RA-2 (200 Mm)
+            | <outer_aux1>
+                [3] RA-2 (200 Mm)
+            | <loopback>
+                [4] RA-2 (200 Mm)
+            | <active_vessel>
+                [1] RA-100 (100 Gm)
+            ",
+            shape="record",
+            group="Duna"];
+        "Duna-B" [label=
+            "<f0> 
+                Duna-B \n 
+                (? Mm \| Duna) \n 
+                [Ivy ??]
+            | <mission_control> 
+                [1] RA-2 (200 Mm)
+            | <inner> 
+                [3] RA-2 (200 Mm)
+            | <outer> 
+                [3] RA-100 (100 Gm)
+            | <loopback> 
+                [4] RA-2 (200 Mm)
+            | <planet_cone>
+                [1] RA-2 (200 Mm)
+            | <active_vessel>
+                [1] RA-100 (100 Gm)
+
+            ",
+            shape="record",
+            group="Duna"];
+        "Ike-A" [label=
+            "<f0> 
+                Ike-A \n 
+                (? Mm \| Ike) \n 
+                [Ivy ??]
+            | <mission_control> 
+                [1] RA-2 (200 Mm)
+            | <inner> 
+                [3] RA-2 (200 Mm)
+            | <loopback>
+                [4] RA-2 (200 Mm)
+            | <planet_cone>
+                [1] RA-2 (200 Mm)
+            | <active_vessel>
+                [1] RA-100 (100 Gm)
+
+            ",
+            shape="record",
+            group="Duna"];
+        "Duna" [label=
+            "<f0> Duna",
+            shape="record",
+            group="Duna"];
+        "Ike" [label=
+            "<f0> Ike",
+            shape="record",
+            group="Duna"];
+        "Active_Vessel_Duna" [label=
+            "<f0> Active Vessel (Duna)",
+            shape="record",
+            group="Duna"];
+    "Kerbol-E" [label=
+        "<f0> 
+            Kerbol-E \n 
+            (20.726 Gm \| Kerbol) \n 
+            [Ivy ??]
+        | <mission_control> 
+            [1] RA-100 (100 Gm)
+        | <planet_network> 
+            [3] RA-100 (100 Gm)
+        | <inner> 
+            [3] RA-100 (100 Gm)
+        | <outer> 
+            [3] RA-100 (100 Gm)
+        | <loopback>
+            [4] RA-100 (100 Gm)
+        | <active_vessel>
+            [1] RA-100 (100 Gm)
+
+        ",
+        shape="record",
+        group="Dres"];
+        "Dres-A" [label=
+            "<f0> 
+                Dres-A \n 
+                (? Mm \| Dres) \n 
+                [Ivy ??]
+            | <mission_control> 
+                [1] RA-2 (200 Mm)
+            | <outer> 
+                [3] RA-100 (100 Gm)
+            | <loopback> 
+                [4] RA-2 (200 Mm)
+            | <planet_cone>
+                [1] RA-2 (200 Mm)
+            | <active_vessel>
+                [1] RA-100 (100 Gm)
+
+            ",
+            shape="record",
+            group="Dres"];
+        "Dres" [label=
+            "<f0> Dres",
+            shape="record",
+            group="Dres"];
+        "Active_Vessel_Dres" [label=
+            "<f0> Active Vessel (Dres)",
+            shape="record",
+            group="Dres"];
+    "Kerbol-F" [label=
+        "<f0> 
+            Kerbol-F \n 
+            (? Gm \| Kerbol) \n 
+            [Ivy ??]
+        | <mission_control> 
+            [1] RA-100 (100 Gm)
+        | <planet_network> 
+            [3] RA-100 (100 Gm)
+        | <inner> 
+            [3] RA-100 (100 Gm)
+        | <outer> 
+            [3] RA-100 (100 Gm)
+        | <loopback>
+            [4] RA-100 (100 Gm)
+        | <active_vessel>
+            [1] RA-100 (100 Gm)
+
+        ",
+        shape="record",
+        group="Kerbol"];
+        
+        
+    "Moho" [label=
+        "<f0> Moho",
+        shape="record"];
+    "Eve" [label=
+        "<f0> Eve",
+        shape="record"];
+    
+    "Jool" [label=
+        "<f0> Jool",
+        shape="record"];
+    "Active_Vessel" [label=
+        "<f0> Active Vessel",
+        shape="record"];
+        
+    // Mission Control
+    "Kerbol-A":mission_control:e         -> "KSC":f1:w [id=000];
+    "Kerbol-B":mission_control:e         -> "KSC":f1:w [id=001];
+    "Kerbol-C":mission_control:e         -> "KSC":f1:w [id=002];
+        "Kerbin-A":mission_control:e     -> "KSC":f1:w [id=003];
+            "Mun-A":mission_control:e    -> "KSC":f1:w [id=004];
+            "Minmus-A":mission_control:e -> "KSC":f1:w [id=005];
+        "Kerbin-B":mission_control:e     -> "KSC":f1:w [id=006];
+    "Kerbol-D":mission_control:e         -> "KSC":f1:w [id=007];
+    "Kerbol-E":mission_control:e         -> "KSC":f1:w [id=008];
+    "Kerbol-F":mission_control:e         -> "KSC":f1:w [id=009];
+
+    // Kerbol Inter-layer
+    "Kerbol-A":outer:e -> "Kerbol-B":inner:w [id=100];
+    "Kerbol-B":outer:e -> "Kerbol-C":inner:w [id=101];
+    "Kerbol-D":inner:e -> "Kerbol-C":outer:w [id=102];
+    "Kerbol-E":inner:e -> "Kerbol-D":outer:w [id=103];
+    "Kerbol-F":inner:e -> "Kerbol-E":outer:w [id=104];
+
+    // Planetary Inter-layer
+    "Kerbol-C":planet_network:e -> "Kerbin-B":outer:w          [id=200];
+        "Mun-A":inner:e         -> "Kerbin-A":outer_aux1:w     [id=201];
+        "Minmus-A":inner:e      -> "Kerbin-A":outer_aux2:w     [id=202];
+        "Kerbin-B":inner:e      -> "Kerbin-A":outer_main:w     [id=203];
+    "Duna-B":outer:e            -> "Kerbol-D":planet_network:w [id=204];
+        "Duna-A":outer_main:e   -> "Duna-B":inner:w            [id=205];
+        "Ike-A":inner:e         -> "Duna-A":outer_aux1:w       [id=206];
+    "Dres-A":outer:e            -> "Kerbol-E":planet_network:w [id=207];
+    
+
+    // Loopback
+    "Kerbol-A":loopback         -> "Kerbol-A":loopback [id=300];
+    "Kerbol-B":loopback         -> "Kerbol-B":loopback [id=301];
+    "Kerbol-C":loopback         -> "Kerbol-C":loopback [id=302];
+        "Kerbin-A":loopback     -> "Kerbin-A":loopback [id=303];
+            "Mun-A":loopback    -> "Mun-A":loopback    [id=304];
+            "Minmus-A":loopback -> "Minmus-A":loopback [id=305];
+        "Kerbin-B":loopback     -> "Kerbin-B":loopback [id=306];
+    "Kerbol-D":loopback         -> "Kerbol-D":loopback [id=307];
+        "Duna-A":loopback       -> "Duna-A":loopback   [id=308];
+            "Ike-A":loopback    -> "Ike-A":loopback    [id=309];
+        "Duna-B":loopback       -> "Duna-B":loopback   [id=310];
+    "Kerbol-E":loopback         -> "Kerbol-E":loopback [id=311];
+        "Dres-A":loopback       -> "Dres-A":loopback   [id=312];
+    "Kerbol-F":loopback         -> "Kerbol-F":loopback [id=313];
+
+    // Planetary Cone
+    "Kerbin":f0:e     -> "Kerbin-B":planet_cone:w [id=400];
+        "Mun": f0:e   -> "Mun-A":planet_cone:w    [id=401];
+        "Minmus":f0:e -> "Minmus-A":planet_cone:w [id=402];
+    "Duna":f0:e       -> "Duna-B":planet_cone:w   [id=403];
+        "Ike": f0:e   -> "Ike-A":planet_cone:w    [id=404];
+    "Dres":f0:e       -> "Dres-A":planet_cone:w   [id=405];
+
+    // Active Vessel
+    // "Active_Vessel":f0:e                -> "Kerbol-A":active_vessel:w [id=500];
+    // "Active_Vessel":f0:e                -> "Kerbol-B":active_vessel:w [id=501];
+    "Active_Vessel_Kerbin":f0:e         -> "Kerbol-C":active_vessel:w [id=502];
+        "Active_Vessel_Kerbin":f0:e     -> "Kerbin-A":active_vessel:w [id=503];
+            "Active_Vessel_Kerbin":f0:e -> "Mun-A":active_vessel:w    [id=504];
+            "Active_Vessel_Kerbin":f0:e -> "Minmus-A":active_vessel:w [id=505];
+        "Active_Vessel_Kerbin":f0:e     -> "Kerbin-B":active_vessel:w [id=506];
+    "Active_Vessel_Duna":f0:e           -> "Kerbol-D":active_vessel:w [id=507];
+        "Active_Vessel_Duna":f0:e       -> "Duna-A":active_vessel:w   [id=508];
+            "Active_Vessel_Duna":f0:e   -> "Ike-A":active_vessel:w    [id=509];
+        "Active_Vessel_Duna":f0:e       -> "Duna-B":active_vessel:w   [id=510];
+    "Active_Vessel_Dres":f0:e           -> "Kerbol-E":active_vessel:w [id=511];
+        "Active_Vessel_Dres":f0:e       -> "Dres-A":active_vessel:w   [id=512];
+    // "Active_Vessel":f0:e                -> "Kerbol-F":active_vessel:w [id=513];
+}
