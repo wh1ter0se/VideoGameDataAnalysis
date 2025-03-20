@@ -1,5 +1,6 @@
 import enums
 import numpy as np
+import bodies
 import graphviz as gv  # type: ignore
 import satelites as sat
 from typing import List
@@ -88,9 +89,9 @@ IvyST1 = sat.Vessel(
     "Ivy ST1",
     [
         sat.AntennaSet("mission_control", 1, sat.RA100()),
-        sat.AntennaSet("planet_network", 3, sat.RA100()),
         sat.AntennaSet("inner", 3, sat.RA100()),
         sat.AntennaSet("outer", 3, sat.RA100()),
+        sat.AntennaSet("planet_network", 3, sat.RA100()),
         sat.AntennaSet("active_vessel", 1, sat.RA100()),
         sat.AntennaSet("loopback", 3, sat.RA100()),
     ],
@@ -101,31 +102,31 @@ IvyST1 = sat.Vessel(
 # region Constellations
 KSC = sat.Station(
     name="KSC",
-    group=enums.Planet.Kerbin,
+    group=bodies.Kerbin,
     antenna=sat.TrackingStation(),
 )
 KerbinPL = sat.Constellation(
     name="Kerbin-PL",
     quantity=6,
     orbital_sma_m=80e6,
-    orbital_body=enums.Planet.Kerbin,
-    group=enums.Planet.Kerbin,
+    orbital_body=bodies.Kerbin,
+    group=bodies.Kerbin,
     vessel=IvyPL1B,
 )
 KerbinPH = sat.Constellation(
     name="Kerbin-PH",
     quantity=6,
     orbital_sma_m=80e6,
-    orbital_body=enums.Planet.Kerbin,
-    group=enums.Planet.Kerbin,
+    orbital_body=bodies.Kerbin,
+    group=bodies.Kerbin,
     vessel=IvyPH1,
 )
 KerbinPS = sat.Constellation(
     name="Kerbin-PS",
     quantity=12,
     orbital_sma_m=1.5e6,
-    orbital_body=enums.Planet.Kerbin,
-    group=enums.Planet.Kerbin,
+    orbital_body=bodies.Kerbin,
+    group=bodies.Kerbin,
     vessel=IvyMPS1,
 )
 MunMH = sat.Constellation(
@@ -133,7 +134,7 @@ MunMH = sat.Constellation(
     quantity=6,
     orbital_sma_m=1.4e6,
     orbital_body=enums.Moon.Mun,
-    group=enums.Planet.Kerbin,
+    group=bodies.Kerbin,
     vessel=IvyMH1,
 )
 MunMPS = sat.Constellation(
@@ -141,7 +142,7 @@ MunMPS = sat.Constellation(
     quantity=12,
     orbital_sma_m=1.4e6,
     orbital_body=enums.Moon.Mun,
-    group=enums.Planet.Kerbin,
+    group=bodies.Kerbin,
     vessel=IvyMPS1,
 )
 MinmusMH = sat.Constellation(
@@ -149,7 +150,7 @@ MinmusMH = sat.Constellation(
     quantity=6,
     orbital_sma_m=1.4e6,
     orbital_body=enums.Moon.Minmus,
-    group=enums.Planet.Kerbin,
+    group=bodies.Kerbin,
     vessel=IvyMH1,
 )
 MinmusMPS = sat.Constellation(
@@ -157,31 +158,31 @@ MinmusMPS = sat.Constellation(
     quantity=12,
     orbital_sma_m=1.4e6,
     orbital_body=enums.Moon.Minmus,
-    group=enums.Planet.Kerbin,
+    group=bodies.Kerbin,
     vessel=IvyMPS1,
 )
 DunaPL = sat.Constellation(
     name="Duna-PL",
     quantity=6,
     orbital_sma_m=80e6,
-    orbital_body=enums.Planet.Duna,
-    group=enums.Planet.Duna,
+    orbital_body=bodies.Duna,
+    group=bodies.Duna,
     vessel=IvyPL1A,
 )
 DunaPH = sat.Constellation(
     name="Duna-PH",
     quantity=6,
     orbital_sma_m=80e6,
-    orbital_body=enums.Planet.Duna,
-    group=enums.Planet.Duna,
+    orbital_body=bodies.Duna,
+    group=bodies.Duna,
     vessel=IvyPH1,
 )
 DunaPS = sat.Constellation(
     name="Duna-PS",
     quantity=12,
     orbital_sma_m=1.5e6,
-    orbital_body=enums.Planet.Duna,
-    group=enums.Planet.Duna,
+    orbital_body=bodies.Duna,
+    group=bodies.Duna,
     vessel=IvyMPS1,
 )
 IkeMH = sat.Constellation(
@@ -189,7 +190,7 @@ IkeMH = sat.Constellation(
     quantity=6,
     orbital_sma_m=1.4e6,
     orbital_body=enums.Moon.Ike,
-    group=enums.Planet.Duna,
+    group=bodies.Duna,
     vessel=IvyMH1,
 )
 IkeMPS = sat.Constellation(
@@ -197,55 +198,55 @@ IkeMPS = sat.Constellation(
     quantity=12,
     orbital_sma_m=1.4e6,
     orbital_body=enums.Moon.Ike,
-    group=enums.Planet.Duna,
+    group=bodies.Duna,
     vessel=IvyMPS1,
 )
 KerbolSTA = sat.Constellation(
     name="Kerbol-ST-A",
     quantity=6,
     orbital_sma_m=(5263138304 + 6315765981) / 2,
-    orbital_body=enums.Star.Kerbol,
-    group=enums.Planet.Moho,
+    orbital_body=bodies.Kerbol,
+    group=bodies.Moho,
     vessel=IvyST1,
 )
 KerbolSTB = sat.Constellation(
     name="Kerbol-ST-B",
     quantity=6,
     orbital_sma_m=(9931011387 + 9734357701) / 2,
-    orbital_body=enums.Star.Kerbol,
-    group=enums.Planet.Eve,
+    orbital_body=bodies.Kerbol,
+    group=bodies.Eve,
     vessel=IvyST1,
 )
 KerbolSTC = sat.Constellation(
     name="Kerbol-ST-C",
     quantity=6,
     orbital_sma_m=(13599840256 + 13599840256) / 2,
-    orbital_body=enums.Star.Kerbol,
-    group=enums.Planet.Kerbin,
+    orbital_body=bodies.Kerbol,
+    group=bodies.Kerbin,
     vessel=IvyST1,
 )
 KerbolSTD = sat.Constellation(
     name="Kerbol-ST-D",
     quantity=6,
     orbital_sma_m=(20726155264 + 21783189163) / 2,
-    orbital_body=enums.Star.Kerbol,
-    group=enums.Planet.Duna,
+    orbital_body=bodies.Kerbol,
+    group=bodies.Duna,
     vessel=IvyST1,
 )
 KerbolSTE = sat.Constellation(
     name="Kerbol-ST-E",
     quantity=6,
     orbital_sma_m=(40839348203 + 46761053692) / 2,
-    orbital_body=enums.Star.Kerbol,
-    group=enums.Planet.Dres,
+    orbital_body=bodies.Kerbol,
+    group=bodies.Dres,
     vessel=IvyST1,
 )
 KerbolSTF = sat.Constellation(
     name="Kerbol-ST-F",
     quantity=6,
     orbital_sma_m=(40839348203 + 46761053692) / 2,
-    orbital_body=enums.Star.Kerbol,
-    group=enums.Planet.Dres,
+    orbital_body=bodies.Kerbol,
+    group=bodies.Jool,
     vessel=IvyST1,
 )
 # endregion
@@ -353,8 +354,6 @@ for connection in connections:
         label=connection.label,
         concentrate="true",
     )
-
-
 # endregion
 
-dot.render("ksp/Grapevine-V1")
+dot.render("ksp/Grapevine-V1.dot")

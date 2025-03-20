@@ -1,5 +1,7 @@
+from __future__ import annotations
+
 import utils
-import enums
+import bodies
 from typing import List
 
 
@@ -88,8 +90,8 @@ class Constellation:
     name: str
     quantity: int
     orbital_sma_m: float
-    orbital_body: enums.Star | enums.Planet | enums.Moon
-    group: enums.Planet
+    orbital_body: bodies.Body
+    group: bodies.Body
     vessel: Vessel
 
     def __init__(
@@ -97,8 +99,8 @@ class Constellation:
         name: str,
         quantity: int,
         orbital_sma_m: float,
-        orbital_body: enums.Star | enums.Planet | enums.Moon,
-        group: enums.Planet,
+        orbital_body: bodies.Body,
+        group: bodies.Body,
         vessel: Vessel,
     ):
         self.name = name
@@ -124,6 +126,13 @@ class Constellation:
     def __lt__(self, other):
         return self.__hash__() < other.__hash__()
 
+    def min_distance(self, other: Constellation) -> float:
+        orbit_stack = []
+        root_body = self.orbital_body
+
+    def max_distance(self, other: Constellation) -> float:
+        pass
+
 
 class Station(Constellation):
 
@@ -132,7 +141,7 @@ class Station(Constellation):
     def __init__(
         self,
         name: str,
-        group: enums.Planet,
+        group: bodies.Body,
         antenna: Antenna,
     ):
         self.antenna = antenna
@@ -199,7 +208,7 @@ class BodyConnection(Connection):
 
     def __init__(
         self,
-        body_from: enums.Star | enums.Planet | enums.Moon,
+        body_from: bodies.Body,
         constellation_to: Constellation,
     ) -> None:
         super().__init__(
